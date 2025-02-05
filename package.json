@@ -1,20 +1,41 @@
 {
-  "name": "starlight-utils-monorepo",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "@ahtinurme/starlight-utils",
+  "author": "Ahti Nurme",
+  "version": "0.2.1",
   "license": "MIT",
-  "private": true,
-  "scripts": {
-    "doc": "pnpm --filter docs",
-    "version": "pnpm changeset version && pnpm i --no-frozen-lockfile"
+  "description": "Utilities to use with your 🌟 Starlight site.",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components/index.ts",
+    "./components/SiteTitle.astro": "./components/SiteTitle.astro",
+    "./components/Sidebar.astro": "./components/Sidebar.astro"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@astrojs/starlight": "^0.31.1",
+    "astro": "^5.2.5"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": "^0.31.1",
+    "astro": "^5.2.5"
   },
   "dependencies": {
-    "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.12",
-    "astro": "^5.2.5",
-    "prettier": "^3.4.2",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.7.3"
+    "astro-integration-kit": "^0.18.0"
   },
-  "packageManager": "pnpm@9.1.1"
+  "keywords": [
+    "starlight",
+    "plugin",
+    "utils",
+    "astro",
+    "astro-component",
+    "withastro"
+  ],
+  "homepage": "https://starlight-utils.pages.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahtinurme/starlight-utils.git",
+    "directory": "packages/starlight-utils"
+  },
+  "bugs": "https://github.com/ahtinurme/starlight-utils/issues"
 }
